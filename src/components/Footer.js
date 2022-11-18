@@ -1,8 +1,9 @@
 import "./FooterStyles.css";
+import data from "./Data.json";
 
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import React from 'react';
-import { FaHome,FaPhone,FaMailBulk, FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaHome,FaPhone,FaMailBulk, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,21 +13,21 @@ const Footer = () => {
                 <div className="location">
                 <FaHome size={20} style={{ color:"#fff" , marginRight : "2rem" }}/>
                     <div>
-                        <p>123 Housing Society.</p>
+                        <p>{data[0].address}</p>
                         <p>India</p>
                     </div>
                 </div>
                 <div className="phone">
                 <FaPhone size={20} style={{color : "#fff" , marginRight : "2rem"}}/>
                     <div>
-                        <p>123-456-789</p>
+                        <p>{data[0].phone}</p>
                     </div>
                 </div>
                 
                 <div className="email">
                 <FaMailBulk size={20} style={{color : "#fff" , marginRight : "2rem"}} />
                     <div>
-                        <p>abcd@gmail.com</p>
+                        <p>{data[0].email}</p>
                     </div>
                 </div>
             </div>

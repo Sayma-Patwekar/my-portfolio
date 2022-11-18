@@ -1,6 +1,7 @@
 import "./AboutContentStyles.css";
 import { Link } from "react-router-dom";
 import react1 from "../assests/pro3.jpg";
+import data from "./Data.json";
 
 import React from 'react'
 
@@ -10,7 +11,7 @@ const AboutContent = () => {
         <div className="about">
             <div className="left">
                 <h1>Who Am I</h1>
-                <p>I am a learner.</p>
+                <p>{data[0].selfDesc}</p>
                 <Link to="/contact">
                     <button className="btn">Contact</button>
                 </Link>
